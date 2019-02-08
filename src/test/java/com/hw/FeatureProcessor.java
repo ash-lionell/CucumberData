@@ -40,6 +40,8 @@ public class FeatureProcessor {
         GherkinDocument compiledDoc = new GherkinDocument(srcDoc);
         Feature feature = compiledDoc.getFeature();
         List<ScenarioDefinition> scenarios = feature.getChildren();
+        //System.out.println("no of children : "+srcDoc.getFeature().getChildren().size());
+        System.out.println("no of children : "+scenarios.size());
 
         List<Expression> expressions = new LinkedList<>();
         if (tagsToRun!=null)

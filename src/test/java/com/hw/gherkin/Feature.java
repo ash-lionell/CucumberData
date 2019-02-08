@@ -48,6 +48,8 @@ public class Feature extends Node {
                 children.add(new Scenario((gherkin.ast.Scenario) scenarioDefinition));
             else if (scenarioDefinition instanceof gherkin.ast.ScenarioOutline)
                 children.add(new ScenarioOutline((gherkin.ast.ScenarioOutline) scenarioDefinition));
+            else if (scenarioDefinition instanceof gherkin.ast.Background)
+                children.add(new Background((gherkin.ast.Background) scenarioDefinition));
         }
         this.children = children;
     }
